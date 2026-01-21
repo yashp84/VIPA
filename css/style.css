@@ -261,22 +261,22 @@ footer {
 @media (max-width: 768px) {
 
     .overlay {
-        padding: 0 15px;
+        padding: 0 12px;
     }
 
     .hero h1 {
-        font-size: 26px;      /* smaller heading */
-        line-height: 1.2;
-        margin-bottom: 8px;
+        font-size: 22px;
+        line-height: 1.15;
+        margin-bottom: 6px;
     }
 
     .hero p {
-        font-size: 15px;      /* smaller paragraph */
-        margin-bottom: 15px;
+        font-size: 13px;
+        margin-bottom: 12px;
     }
 
     .btn {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
