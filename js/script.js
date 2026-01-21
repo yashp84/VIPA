@@ -107,3 +107,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // start slider
   startAutoSlide();
 });
+
+// Show button only after scrolling
+const goTopBtn = document.getElementById("goTop");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        goTopBtn.style.display = "block";
+    } else {
+        goTopBtn.style.display = "none";
+    }
+};
+
+// Smooth scroll to top
+goTopBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
