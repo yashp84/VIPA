@@ -281,37 +281,35 @@ footer {
     }
 }
 
-/* Arrows styling (always visible) */
 .slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 35px;
-    color: white;
-    cursor: pointer;
-    z-index: 20;
-    padding: 5px;
-    user-select: none;
-    transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  padding: 5px;
+  user-select: none;
+  transition: 0.3s;
 }
 
 .slider-arrow:hover {
-    color: #c9a24d;
+  color: #c9a24d;
 }
 
 .slider-arrow.prev {
-    left: 10px;
+  left: 10px;
 }
 
 .slider-arrow.next {
-    right: 10px;
+  right: 10px;
 }
 
-/* Optional: adjust size on small mobile screens */
-@media (max-width: 480px) {
-    .slider-arrow {
-        font-size: 28px;
-        padding: 3px;
-    }
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .slider-arrow {
+    font-size: 28px;
+  }
 }
 
