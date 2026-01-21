@@ -313,3 +313,35 @@ footer {
   }
 }
 
+/* =========================
+   HERO TEXT MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+
+    .overlay {
+        padding: 10px 15px;       /* small padding so images are visible */
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 20px !important;   /* very small heading */
+        line-height: 1.2 !important;
+        margin-bottom: 5px !important;
+    }
+
+    .hero p {
+        font-size: 12px !important;   /* small paragraph */
+        margin-bottom: 8px !important;
+    }
+
+    .btn {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+
+    /* Optional: reduce hero height so image fits nicely */
+    .hero, .slider-container {
+        height: 70vh;
+    }
+}
+
