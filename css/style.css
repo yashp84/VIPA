@@ -77,7 +77,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px; /* prevents header overlap */
+    padding-top: 10px; /* prevents header overlap */
 }
 
 .slider-container {
@@ -280,4 +280,5 @@ footer {
         font-size: 13px;
     }
 }
+
 
