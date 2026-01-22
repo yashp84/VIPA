@@ -226,6 +226,15 @@ section {
   padding: 5px 0;
   font-size: 14px;
 }
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 30px;
+    }
+}
+.project-card {
+    margin-bottom: 50px;
+}
+
 
 /* =========================
    CONTACT
