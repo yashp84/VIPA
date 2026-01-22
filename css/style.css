@@ -563,3 +563,18 @@ footer {
 .floating-whatsapp:hover {
     background-color: #1ebe57; /* slightly darker green on hover */
 }
+
+@media (max-width: 768px) {
+  .slide {
+    background-size: contain;   /* show full image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f3f0;  /* fills empty space nicely */
+  }
+}
+
+.project-grid {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
