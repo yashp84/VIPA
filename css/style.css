@@ -1029,3 +1029,114 @@ a {
         object-fit: contain; /* full image visible */
     }
 }
+
+/* HERO SLIDER - FULLY RESPONSIVE */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    overflow: hidden;
+    margin: 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* keep full image visible */
+    display: block;
+}
+
+/* ARROWS */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-arrow.prev { left: 20px; }
+.slider-arrow.next { right: 20px; }
+
+.slider-arrow:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* OVERLAY TEXT */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.overlay h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.overlay p {
+    font-size: 18px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh; /* full screen on mobile */
+    }
+
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .slider-arrow {
+        font-size: 28px;
+        padding: 8px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* show full image */
+    }
+}
+
+/* REMOVE ANY EXTRA BODY MARGIN */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
