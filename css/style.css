@@ -670,3 +670,21 @@ a {
         padding: 10px;
     }
 }
+
+/* ===== IMAGE FULL VIEW FIX ===== */
+.detail-img {
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .detail-img {
+        width: 100%;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
