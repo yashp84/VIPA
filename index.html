@@ -1,209 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>VIPA REALTORS | Luxury Real Estate Ahmedabad</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vipa Realtors</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
-    <nav class="nav">
-       <div class="logo-container">
-    <img src="images/logo.jpeg" class="logo" alt="VIPA Logo">
-    <p class="logo-text">Vipa Realtors</p>
-</div>
-
-        </div>
-        <ul id="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </nav>
+    <div class="logo-container">
+        <img src="images/logo.jpeg" alt="Vipa Realtors" class="logo">
+        <span class="logo-text">Vipa Realtors</span>
+    </div>
+    <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li class="dropdown">
+            <a href="#">Projects ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="project-maruti aatman.html">Maruti Aatman</a></li>
+                <li><a href="project-dharti saket.html">Dharti Saket</a></li>
+                <li><a href="project-super shaligram.html">Super Shaligram</a></li>
+                <li><a href="project-terranova.html">Terranova</a></li>
+                <li><a href="project-yash imperia.html">Yash Imperia</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
 </header>
 
+<!-- HERO SLIDER -->
 <section class="hero" id="home">
     <div class="slider-container">
-    <div class="slide active" style="background-image: url('images/slide1.png');"></div>
-    <div class="slide" style="background-image: url('images/slide2.png');"></div>
-    <div class="slide" style="background-image: url('images/slide3.png');"></div>
-    <div class="slide" style="background-image: url('images/slide4.png');"></div>
-</div>
- <!-- Arrows -->
-    <div class="slider-arrow prev">&#10094;</div>
-    <div class="slider-arrow next">&#10095;</div>
-</div>
+        <div class="slide active" style="background-image:url('images/slide1.png');"></div>
+        <div class="slide" style="background-image:url('images/slide2.png');"></div>
+        <div class="slide" style="background-image:url('images/slide3.png');"></div>
+        <span class="slider-arrow prev" onclick="prevSlide()">&#10094;</span>
+        <span class="slider-arrow next" onclick="nextSlide()">&#10095;</span>
+    </div>
     <div class="overlay">
-        
-        <p>Exclusive Residential Projects in Ahmedabad</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn">Enquire Now</a>
-           
-        </div>
+        <h1>Welcome to Vipa Realtors</h1>
+        <p>Luxury & Premium Residential Projects in Ahmedabad</p>
     </div>
 </section>
 
+<!-- ABOUT US -->
 <section class="about" id="about">
-    <h2>VIPA REALTORS</h2>
-    <p>
-        VIPA Realtors delivers premium and ultra-luxury residential projects
-        in Ahmedabad, partnering with reputed developers for iconic living.
-    </p>
+    <h2>About Vipa Realtors</h2>
+    <p>Vipa Realtors is a premier real estate company delivering ultra-luxury and premium homes in Ahmedabad.</p>
+    <p>We combine quality, innovation, and trust to create living spaces that are truly exceptional.</p>
 </section>
 
+<!-- PROJECTS -->
 <section class="projects" id="projects">
     <h2>Our Projects</h2>
-
-    <!-- Maruti Buildcon -->
-    <div class="project-card">
-        <h3>Maruti Buildcon</h3>
-        <ul>
-            <li><strong>Developer:</strong> Maruti Buildcon (Anjney Finebuild)</li>
-            <li><strong>Location:</strong> Bodakdev, near SG Highway & Karnavati Club</li>
-            <li><strong>Project Type:</strong> Under-Construction, ultra-luxury residential apartments</li>
-            <li><strong>Towers:</strong> Twin Towers | 41 Floors</li>
-            <li><strong>Units:</strong> 124 units, 4,5,& 6 BHK including duplexes and penthouses</li>
-            <li><strong>Area:</strong> Spans 2.15 acres.</li>
-            <li><strong>Size:</strong> 4810-5060 sq.ft.</li>
-            <li><strong>Price:</strong> ₹4.30 – ₹5.50 Cr</li>
-        </ul>
-        <a href="brochure/MARUTI_AATMAN - FINAL EBROCHURE.pdf" target="_blank" class="brochure-btn">📄 View Brochure</a>
+    <div class="project-container">
+        <!-- Project 1 -->
+        <div class="project-item">
+            <img src="images/slide1.png" alt="Ambli Road - Maruti Buildcon">
+            <div class="overlay">
+                <h3>Maruti Aatman</h3>
+                
+                <a href="project-maruti aatman.html" class="view-more">View More</a>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-item">
+            <img src="images/pro2.png" alt="Vaishnodevi Circle - Dharti Saket">
+            <div class="overlay">
+                <h3>The Nest by Dharti Saket</h3>
+                
+                <a href="project-dharti saket.html" class="view-more">View More</a>
+            </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-item">
+            <img src="images/pro3.png" alt="Super Shaligram">
+            <div class="overlay">
+                <h3>Super Shaligram</h3>
+                
+                <a href="project-super shaligram.html" class="view-more">View More</a>
+            </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-item">
+            <img src="images/pro4.png" alt="Super Shaligram">
+            <div class="overlay">
+                <h3>Terranova</h3>
+                
+                <a href="project-terranova.html" class="view-more">View More</a>
+            </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-item">
+            <img src="images/pro5.png" alt="Super Shaligram">
+            <div class="overlay">
+                <h3>Yash Imperia</h3>
+                
+                <a href="project-yash imperia.html" class="view-more">View More</a>
+            </div>
+        </div>
     </div>
-
-    <!-- Dharti Saket -->
-    <div class="project-card">
-        <h3>Dharti Saket</h3>
-        <ul>
-            <li><strong>Location:</strong> Near Vaishnodevi Circle, Ahmedabad</li>
-            <li><strong>Configuration:</strong> 3, 4 & 5 BHK apartments</li>
-            <li><strong>Area:</strong> Approx. 2.25 Acres, 8 Towers, 14 Floors</li>
-            <li><strong>Status:</strong> Under Construction</li>
-            <li><strong>Possession:</strong> June / July 2027</li>
-            <li><strong>Price:</strong> ₹1.35 Cr</li>
-        </ul>
-        <a href="brochure/DOC-20251106-WA0000..pdf" target="_blank" class="brochure-btn">📄 View Brochure</a>
-    </div>
-
-    <!-- Vaishnodevi Circle Project -->
-    <div class="project-card">
-        <h3>Super Shaligram</h3>
-        <ul>
-            <li><strong>Location:</strong> Near S.G. Highway, Gota, Ahmedabad</li>
-            <li><strong>Structure:</strong> 5 towers, 21 floors, 2.98 acres</li>
-            <li><strong>Units:</strong> 410 premium residences</li>
-            <li><strong>Possession:</strong> June 2026 (RERA March/May 2029)</li>
-            <li><strong>RERA Number:</strong> PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA11845/240523</li>
-            <li><strong>Configuration & Pricing:</strong></li>
-            <ul>
-                <li>3 BHK ~2645 sq.ft. ₹1.38 – ₹1.60 Cr</li>
-                <li>4 BHK ~3445 sq.ft. ₹1.65 – ₹1.82 Cr</li>
-                <li>Penthouse Up to ₹3.47 Cr</li>
-            </ul>
-            <li><strong>Amenities:</strong> 
-Swimming pool, clubhouse, mini theater/home theater, and a banquet hall.</li>
-<li><strong>Fitness:</strong> Gymnasium, yoga/meditation deck, and multipurpose court.</li>
-<li><strong>Social & Leisure:</strong> Open café, library, indoor games, senior citizen sit-out, and a landscaped garden.</li>
-<li><strong>Utilities:</strong> 3-level basement parking, power backup, fire fighting systems, and 24/7 security with CCTV.</li> 
-
-            <li><strong>Accessibility:</strong> 400m from NH 147, near Chandkheda Road Railway Station & Vaishnodevi Circle</li>
-        </ul>
-        <a href="Super Shaligram.pdf" target="_blank" class="brochure-btn">📄 View Brochure</a>
-    </div>
-
-    <!-- Terranova -->
-    <div class="project-card">
-        <h3>Terranova</h3>
-        <ul>
-            <li><strong>Address:</strong> Opp. Vrundavan Heights, Vandematram Road, Gota, Ahmedabad</li>
-            <li><strong>Structure:</strong> G+14 Floors, 2 Towers</li>
-            <li><strong>Units:</strong> 100 Premium Residences + 74 Retail Shops</li>
-            <li><strong>Parking:</strong> 2 Basement Parking per unit</li>
-            <li><strong>Amenities:</strong> Over 35 facilities including cricket box, banquet hall, gym, yoga/meditation, children’s play area, senior citizen sit-outs, volleyball, basketball, library</li>
-        </ul>
-        <a href="terranova_.pdf" target="_blank" class="brochure-btn">📄 View Brochure</a>
-    </div>
-
-
-
-<!-- yash imperia -->
-    <div class="project-card">
-        <h3>Yash Imperia</h3>
-        <ul>
-            <li><strong>Developer:</strong> Yash Group-Since 1990</li>
-            <li><strong>Address:</strong> Yash Imperia,Near Bank of Baroda(Chharodi Branch),Jagatpur Road,Chharodi Ahmedabad</li>
-            <li><strong>Structure:</strong> 4 Towers</li>
-            <li><strong>Units:</strong> 224</li>
-            <li><strong>Configuration:</strong> 3BHK apartments with 3 Bathrooms and 2 Balconies</li>
-            <li><strong>Status:</strong> Under Construction (Work Completed 75%)</li>
-            <li><strong>Possession:</strong> December 2026</li>
-            <li><strong>Parking:</strong> 2 Covered Car Parking per unit</li>
-            <li><strong>Amenities:</strong>Swimming Pool,Gym,Indoor Games,CCTV & 24x7 Security</li>
-        </ul>
-        <a href="yash imperia_.pdf" target="_blank" class="brochure-btn">📄 View Brochure</a>
-    </div>
-
-
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <textarea placeholder="Message"></textarea>
-        <button type="submit" class="btn">Submit</button>
+
+    <form onsubmit="sendWhatsAppMessage(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <textarea id="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
     </form>
-    <div class="contact-info">
-        <p>📞 WhatsApp: 8140213274</p>
-        <p>✉️ Email: vipa_realtors7055@gmail.com</p>
-        <a href="https://wa.me/918140213274" target="_blank" class="whatsapp">WhatsApp</a>
-    </div>
-    
-</section>
-<!-- Go to Top Button -->
-<a href="#" class="go-top" id="goTop" title="Go to Top">^</a>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/918140213274" target="_blank" class="floating-whatsapp">💬</a>
-
+    <a href="https://wa.me/918140213274" class="whatsapp" target="_blank">
+        Chat on WhatsApp
+    </a>
 </section>
 
-<footer>
+
+<!-- FOOTER -->
+<footer class="footer">
     <div class="footer-container">
-        <div class="footer-about">
-            <h3>VIPA Realtors</h3>
-            <p>Delivering premium and ultra-luxury residential projects in Ahmedabad.</p>
-        </div>
-
-        <div class="footer-sitemap">
-            <h3>Site Map</h3>
-            <ul>
-                <li><a href="#home"> Home</a></li>
-                <li><a href="#projects"> Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact"> Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-contact">
+        <div class="footer-section">
             <h3>Contact Us</h3>
             
-            <p>✉️ Email: vipa_realtors7055@gmail.com</p>
-            <p>📞 WhatsApp: 8140213274</p>
-            <a href="https://wa.me/918140213274" target="_blank" class="whatsapp">WhatsApp</a>
+            <p>📧 vipa.realtors7055@gmail.com</p>
+            <p>📞 +91 81402 13274</p>
+        </div>
+        <div class="footer-section">
+            <h3>Our Projects</h3>
+            <ul>
+                <li><a href="project-maruti aatman.html">Maruti Aatman</a></li>
+                <li><a href="project-dharti saket.html">Dharti Saket</a></li>
+                <li><a href="project-super shaligram.html">Super Shaligram</a></li>
+                <li><a href="project-terranova.html">Terranova</a></li>
+                <li><a href="project-yash imperia.html">Yash Imperia</a></li>
+            </ul>
         </div>
     </div>
-
     <div class="footer-bottom">
-        © Vipa Realtors is Powered by Tech.Yash Prajapati Ltd.
+        <p>© 2026 Vipa Realtors.Powered by Yash Prajapati Ltd.</p>
     </div>
 </footer>
 
+<!-- Floating Go Top -->
+<a href="#" class="go-top" id="goTop">↑</a>
 
 <script src="js/script.js"></script>
 </body>

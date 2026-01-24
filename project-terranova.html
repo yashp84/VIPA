@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terranova – Vipa Realtors</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.brochure-btn {
+    background: #b38b2e;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.brochure-btn:hover {
+    background: #997022;
+    box-shadow: 0 5px 15px rgba(179,139,46,0.4);
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo-container">
+        <img src="images/logo.jpeg" class="logo" alt="Vipa Realtors">
+        <span class="logo-text">Vipa Realtors</span>
+    </div>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li class="dropdown">
+            <a href="#">Projects ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="project-maruti aatman.html">Maruti Aatman</a></li>
+                <li><a href="project-dharti saket.html">Dharti Saket</a></li>
+                <li><a href="project-super shaligram.html">Super Shaligram</a></li>
+                <li><a href="project-terranova.html">Terranova</a></li>
+                <li><a href="project-yash imperia.html">Yash Imperia</a></li>
+            </ul>
+        </li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+</header>
+
+<!-- PROJECT DETAILS -->
+<section class="project-detail">
+    <h1>Terranova</h1>
+    <img src="images/pro4.png" class="detail-img" alt="Terranova Project">
+    
+    <p>
+        🌟 TERRANOVA<br>
+        Exclusive Premium 3BHK Residences and Commercial Spaces<br>
+         Opp. Vrundavan Heights, Vandematram Road, Gota, Ahmedabad, India 382481<br>
+         Ground Floor + 14 Floors<br>
+         2 Allotted Basement Parking Spaces<br>
+         2 Iconic Towers<br>
+         100 Premium Residences<br>
+         74 Retail Shops<br>
+         Over 35 Exceptional Facilities
+    </p>
+
+    <a href="brochure/terranova_.pdf" target="_blank" class="brochure-btn">Download Brochure</a>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities">
+    <h2 style="text-align:center; margin-top:40px;">Amenities</h2>
+    <div class="amenities-grid">
+        <div class="amenity-item">🏏 Cricket Box</div>
+        <div class="amenity-item">🎉 Banquet Hall</div>
+        <div class="amenity-item">🏋 Fitness Center (Gym)</div>
+        <div class="amenity-item">🎠 Children's Play Area</div>
+        <div class="amenity-item">🌳 Senior Citizen Sit-Outs</div>
+        <div class="amenity-item">🏐 Volleyball Court</div>
+        <div class="amenity-item">🏀 Basketball Court</div>
+        <div class="amenity-item">📚 Library</div>
+        <div class="amenity-item">💧 Swimming Pool</div>
+        <div class="amenity-item">🛡 24×7 Security & CCTV</div>
+        <div class="amenity-item">🚗 Basement Parking</div>
+        <div class="amenity-item">🌿 Landscaped Garden</div>
+        <div class="amenity-item">🎮 Indoor Games Room</div>
+        <div class="amenity-item">☕ Open Café</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            
+            <p>📧 vipa.realtors7055@gmail.com</p>
+            <p>📞 +91 81402 13274</p>
+        </div>
+        <div class="footer-section">
+            <h3>Our Projects</h3>
+            <ul>
+                <li><a href="project-maruti aatman.html">Maruti Aatman</a></li>
+                <li><a href="project-dharti saket.html">Dharti Saket</a></li>
+                <li><a href="project-super shaligram.html">Super Shaligram</a></li>
+                <li><a href="project-terranova.html">Terranova</a></li>
+                <li><a href="project-yash imperia.html">Yash Imperia</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Vipa Realtors.Powered by Yash Prajapati Ltd.</p>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('menu').classList.toggle('show'); }
+document.querySelectorAll('.dropdown > a').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('active');
+    });
+});
+</script>
+</body>
+</html>
