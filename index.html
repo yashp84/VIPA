@@ -34,18 +34,28 @@
 
 <!-- HERO SLIDER -->
 <section class="hero" id="home">
-    <div class="slider-container">
-        <div class="slide active" style="background-image:url('images/slide1.png');"></div>
-        <div class="slide" style="background-image:url('images/slide2.png');"></div>
-        <div class="slide" style="background-image:url('images/slide3.png');"></div>
-        <span class="slider-arrow prev" onclick="prevSlide()">&#10094;</span>
-        <span class="slider-arrow next" onclick="nextSlide()">&#10095;</span>
+  <div class="slider-container">
+    <div class="slide active">
+      <img src="images/slide1.png" alt="Slide 1">
     </div>
-    <div class="overlay">
-        <h1>Welcome to Vipa Realtors</h1>
-        <p>Luxury & Premium Residential Projects in Ahmedabad</p>
+    <div class="slide">
+      <img src="images/slide2.png" alt="Slide 2">
     </div>
+    <div class="slide">
+      <img src="images/slide3.png" alt="Slide 3">
+    </div>
+
+    <!-- Slider arrows -->
+    <span class="slider-arrow prev" onclick="prevSlide()">&#10094;</span>
+    <span class="slider-arrow next" onclick="nextSlide()">&#10095;</span>
+  </div>
+
+  <div class="overlay">
+    <h1>Welcome to Vipa Realtors</h1>
+    <p>Luxury & Premium Residential Projects in Ahmedabad</p>
+  </div>
 </section>
+
 
 <!-- ABOUT US -->
 <section class="about" id="about">
