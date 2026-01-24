@@ -687,4 +687,28 @@ a {
         object-fit: contain !important;
     }
 }
+/* ===== MOBILE IMAGE FIX ===== */
+@media (max-width: 768px) {
 
+    /* Make the project detail container auto-height */
+    .project-detail {
+        height: auto !important;
+        padding: 15px;
+    }
+
+    /* Make image fully visible */
+    .project-detail img,
+    .detail-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        display: block;
+    }
+
+    /* Amenities grid mobile layout */
+    .amenities-grid {
+        grid-template-columns: 1fr !important; /* 1 column */
+        gap: 12px;
+    }
+}
