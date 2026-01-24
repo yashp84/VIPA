@@ -942,263 +942,83 @@ a {
     }
 }
 
-/* HERO SLIDER */
-.hero {
-    position: relative;
-    width: 100%;
-    margin: auto;
-}
-
-.slider-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-    width: 100%;
-}
-
-.slide.active {
-    display: block;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;       /* natural height */
-    object-fit: contain; /* no cropping */
-    display: block;
-}
-
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: #fff;
-    background: rgba(0,0,0,0.4);
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.slider-arrow.prev { left: 20px; }
-.slider-arrow.next { right: 20px; }
-
-.slider-arrow:hover {
-    background: rgba(0,0,0,0.7);
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.overlay h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
-}
-
-.overlay p {
-    font-size: 18px;
-}
-
-/* MOBILE FIX */
+/* ===================== MOBILE HERO FIX ===================== */
 @media (max-width: 768px) {
-    .overlay h1 { font-size: 28px; }
-    .overlay p { font-size: 16px; }
 
-    .slider-arrow {
-        font-size: 28px;
-        padding: 8px;
+    /* Hero takes full viewport height */
+    .hero {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 
+    /* Slider container fills hero */
+    .slider-container {
+        height: 100%;
+    }
+
+    /* Each slide fills container */
+    .slide {
+        display: none;
+        height: 100%;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    /* Images fully visible, no cropping */
     .slide img {
         width: 100%;
-        height: auto; /* scale naturally */
-        object-fit: contain; /* full image visible */
-    }
-}
-
-/* HERO SLIDER - FULLY RESPONSIVE */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* full viewport height */
-    overflow: hidden;
-    margin: 0;
-}
-
-.slider-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-
-.slide.active {
-    display: block;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* keep full image visible */
-    display: block;
-}
-
-/* ARROWS */
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: #fff;
-    background: rgba(0,0,0,0.4);
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.slider-arrow.prev { left: 20px; }
-.slider-arrow.next { right: 20px; }
-
-.slider-arrow:hover {
-    background: rgba(0,0,0,0.7);
-}
-
-/* OVERLAY TEXT */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    padding: 0 20px;
-    height: 100%;
-}
-
-.overlay h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
-}
-
-.overlay p {
-    font-size: 18px;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-    .hero {
-        height: 100vh; /* full screen on mobile */
+        height: 100%;
+        object-fit: contain;
+        display: block;
     }
 
+    /* Overlay stays centered vertically and horizontally */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* center vertically */
+        align-items: center;     /* center horizontally */
+        text-align: center;
+        padding: 20px;
+        background: rgba(0,0,0,0.35); /* keep overlay slightly dark */
+    }
+
+    /* Overlay text sizing */
     .overlay h1 {
         font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 1.2;
     }
 
     .overlay p {
         font-size: 16px;
+        line-height: 1.4;
     }
 
+    /* Slider arrows smaller */
     .slider-arrow {
         font-size: 28px;
         padding: 8px;
     }
 
-    .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* show full image */
+    /* Remove extra spacing between sections */
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
-}
 
-/* REMOVE ANY EXTRA BODY MARGIN */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-/* =========================
-   MOBILE FIXES
-========================= */
-@media (max-width: 768px) {
-
-  /* Slider container */
-  .hero,
-  .slider,
-  .slider-container {
-    height: auto !important;
-    min-height: 70vh;
-  }
-
-  /* Slider image */
-  .slider img,
-  .hero img {
-    height: 70vh;
-    object-fit: cover;
-  }
-
-  /* Welcome text section */
-  .welcome,
-  .hero-content {
-    padding: 30px 15px;
-    text-align: center;
-    background: #9e9e9e; /* same grey, controlled */
-  }
-
-  .welcome h1,
-  .hero-content h1 {
-    font-size: 26px;
-    line-height: 1.3;
-    margin-bottom: 10px;
-  }
-
-  .welcome p,
-  .hero-content p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* Slider arrows */
-  .prev,
-  .next {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-  }
-
-  .prev { left: 10px; }
-  .next { right: 10px; }
-
-  /* Remove extra blank space */
-  section {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
+    /* Optional: reduce section padding on mobile */
+    .projects, .about, .contact, .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
