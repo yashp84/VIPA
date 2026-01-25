@@ -1139,3 +1139,65 @@ a {
         font-size: 22px;
     }
 }
+
+/* ================= FLOATING BUTTONS – MOBILE FIX ================= */
+
+.float-whatsapp,
+.float-top {
+    position: fixed;
+    bottom: 20px;
+    z-index: 99999; /* above hero, overlay, slider */
+}
+
+/* WhatsApp – left side */
+.float-whatsapp {
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Go to Top – right side (RED BOX WITH ARROW) */
+.float-top {
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #e53935;
+    color: #fff;
+    border-radius: 8px;
+    display: none; /* shown by JS */
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* ---------- MOBILE FORCE VISIBILITY ---------- */
+@media (max-width: 768px) {
+
+    .float-whatsapp,
+    .float-top {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    .float-whatsapp {
+        bottom: 18px;
+        left: 15px;
+    }
+
+    .float-top {
+        bottom: 18px;
+        right: 15px;
+    }
+}
