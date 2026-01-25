@@ -1022,3 +1022,55 @@ a {
         padding-right: 15px;
     }
 }
+
+
+/* ===================================================
+   HERO SLIDER FINAL OVERRIDE (SAFE FIX)
+   DOES NOT AFFECT OTHER SECTIONS
+=================================================== */
+
+/* Reset conflicting hero heights */
+.hero {
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+/* Slider container should size naturally */
+.slider-container {
+    height: auto !important;
+}
+
+/* Slides behave normally */
+.slide {
+    position: relative !important;
+    inset: unset !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+/* Image controls the height */
+.slide img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto !important;
+    }
+
+    .slider-container {
+        height: auto !important;
+    }
+
+    .slide img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important; /* no crop on mobile */
+    }
+}
