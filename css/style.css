@@ -1074,3 +1074,68 @@ a {
         object-fit: contain !important; /* no crop on mobile */
     }
 }
+
+/* ===================================================
+   FLOATING WHATSAPP & GO TO TOP (OPPOSITE SIDES)
+=================================================== */
+
+/* WhatsApp - LEFT SIDE */
+.float-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: #fff;
+    font-size: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.float-whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.1);
+}
+
+/* GO TO TOP - RIGHT SIDE (RED BOX) */
+.float-top {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #e53935; /* RED */
+    color: #fff;
+    font-size: 26px;
+    border-radius: 8px; /* box look */
+    border: none;
+    cursor: pointer;
+    display: none; /* show on scroll */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.float-top:hover {
+    background: #c62828;
+    transform: translateY(-4px);
+}
+
+/* Mobile size */
+@media (max-width: 768px) {
+    .float-whatsapp,
+    .float-top {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+}
